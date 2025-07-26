@@ -59,7 +59,7 @@
     .social-icons a {
       margin-right: 15px;
       color: #1a73e8;
-      font-size: 1.5em;
+      font-size: 2.5em;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -152,6 +152,91 @@
     #talks td.announcement {
       vertical-align: top;
     }
+    
+    /* Mobile responsive styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px 20px;
+        margin: 10px auto;
+      }
+      
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .profile-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 150px;
+      }
+      
+      .header-info h1 {
+        font-size: 2em;
+      }
+      
+      .header-info p {
+        font-size: 1em;
+      }
+      
+      .social-icons a {
+        font-size: 2em;
+      }
+      
+      /* Mobile publication layout */
+      .publication {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .publication img {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100px;
+      }
+      
+      .pub-details h3 {
+        font-size: 1em;
+        text-align: left;
+      }
+      
+      .pub-details p {
+        text-align: left;
+      }
+      
+      /* Mobile talks table */
+      #talks table {
+        display: block;
+      }
+      
+      #talks tr {
+        display: block;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+      }
+      
+      #talks td {
+        display: block;
+        width: 100% !important;
+        min-width: unset !important;
+        padding-right: 0 !important;
+        white-space: normal !important;
+      }
+      
+      #talks td.date {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+        color: #666;
+      }
+      
+      #talks td.announcement {
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
+    }
   </style>
 </head>
 <body>
@@ -187,7 +272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am an MSc student at the Technion CS faculty, supervised by <a href="https://ron.cs.technion.ac.il/" target="_blank">Ron Kimmel</a>. My research focuses on 3D representation, reconstruction, and generation.
+        I am an MSc student at the Technion CS faculty, supervised by <a href="https://ron.cs.technion.ac.il/" target="_blank">Professor Ron Kimmel</a>. My research focuses on 3D representation, reconstruction, and generation.
       </p>
     </section>
     
