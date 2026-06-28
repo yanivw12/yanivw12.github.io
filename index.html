@@ -9,51 +9,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yaniv Wolf</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <style>
-    :root {
-      --bg-color: #fafafa;
-      --card-bg: #ffffff;
-      --text-main: #222222;
-      --text-muted: #666666;
-      --accent-color: #3b82f6; /* Subtle clean blue */
-      --accent-hover: #1d4ed8;
-      --border-color: #eaeaea;
-    }
-
+    /* Global Styles */
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       margin: 0;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
     .container {
-      max-width: 800px;
-      margin: 60px auto;
-      background: var(--card-bg);
-      padding: 40px 50px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
+    /* Header Linkage & Profile Styling */
     header {
       display: flex;
       align-items: center;
-      gap: 32px;
-      padding-bottom: 35px;
-      border-bottom: 1px solid var(--border-color);
-      margin-bottom: 40px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 30px;
     }
 
     .profile-photo {
-      width: 140px;
-      height: 140px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      background-color: var(--border-color);
+      border: 3px solid #1a73e8;
+      margin-right: 30px;
     }
 
     .header-info {
@@ -61,155 +53,147 @@
     }
 
     .header-info h1 {
-      margin: 0 0 6px 0;
-      font-size: 2.2em;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      margin: 0 0 10px 0;
+      font-size: 2.5em;
+      color: #1a73e8;
     }
 
     .header-info p {
-      font-size: 1.1em;
-      color: var(--text-muted);
-      margin: 0 0 16px 0;
+      font-size: 1.2em;
+      color: #555;
+      margin: 0 0 15px 0;
     }
 
     .social-icons {
       display: flex;
-      gap: 16px;
+      gap: 15px;
     }
 
     .social-icons a {
-      color: var(--text-muted);
-      font-size: 1.4em;
+      color: #1a73e8;
+      font-size: 2.2em; /* Balanced size to keep layout uniform */
       text-decoration: none;
       transition: color 0.2s ease;
     }
 
     .social-icons a:hover {
-      color: var(--accent-color);
+      color: #0c47a1;
     }
 
+    /* Section Elements */
     section {
-      margin-bottom: 45px;
+      margin-bottom: 35px;
     }
 
     h2 {
-      font-size: 1.4em;
-      font-weight: 600;
-      letter-spacing: -0.01em;
+      font-size: 1.5em;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
       margin-bottom: 20px;
-      color: var(--text-main);
+      color: #333;
     }
 
     p {
-      margin: 0 0 16px 0;
+      margin: 0 0 15px 0;
     }
 
     a {
-      color: var(--accent-color);
+      color: #1a0dab;
       text-decoration: none;
-      transition: color 0.2s ease;
     }
 
     a:hover {
-      color: var(--accent-hover);
       text-decoration: underline;
     }
 
-    /* List Layout for Publications & Tables */
+    /* Publications Design */
     .publication {
       display: flex;
       align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
     .publication img {
-      width: 110px;
+      width: 120px;
       height: auto;
-      border-radius: 6px;
-      border: 1px solid var(--border-color);
+      margin-right: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
       object-fit: cover;
     }
 
+    .pub-details {
+      flex: 1;
+    }
+
     .pub-details h3 {
-      margin: 0 0 4px 0;
-      font-size: 1.05em;
-      font-weight: 600;
-      color: var(--text-main);
+      margin: 0 0 6px 0;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #333;
     }
 
     .pub-details p {
       margin: 0 0 4px 0;
-      font-size: 0.95em;
-      color: var(--text-muted);
+      color: #555;
     }
 
     .pub-details p.conference {
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .pub-details p.tldr {
-      font-size: 0.9em;
-      margin-top: 8px;
+      font-style: italic;
+      color: #333;
     }
 
     .pub-links {
       margin: 8px 0;
-      display: flex;
-      gap: 12px;
     }
 
     .pub-links a {
-      font-size: 0.85em;
-      font-weight: 500;
-      padding: 2px 10px;
-      background: #f0f4ff;
-      color: var(--accent-hover);
-      border-radius: 4px;
-    }
-    
-    .pub-links a:hover {
-      background: #e0ebff;
-      text-decoration: none;
-    }
-
-    /* Unified Grid layout for list elements */
-    .row-item {
-      display: flex;
-      gap: 24px;
-      margin-bottom: 12px;
+      margin-right: 15px;
+      color: #1a0dab;
       font-size: 0.95em;
     }
 
-    .row-item .date {
-      width: 100px;
-      min-width: 100px;
-      color: var(--text-muted);
-      font-weight: 500;
+    /* Shared Table Layout for Data Sections */
+    table {
+      width: 100%;
+      border-collapse: collapse;
     }
 
-    .row-item .content {
-      flex: 1;
+    td {
+      padding-bottom: 12px;
+      vertical-align: top;
     }
 
+    td.date {
+      width: 130px;
+      min-width: 130px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    td.announcement {
+      color: #333;
+    }
+
+    /* Footer Details */
     .footer {
       text-align: center;
-      font-size: 0.8em;
-      color: var(--text-muted);
-      margin-top: 60px;
-      border-top: 1px solid var(--border-color);
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
       padding-top: 20px;
     }
 
-    /* Mobile Adaptability */
-    @media (max-width: 600px) {
-      .container { padding: 24px 20px; margin: 20px auto; }
-      header { flex-direction: column; text-align: center; gap: 16px; }
-      .social-icons { justify-content: center; }
-      .publication { flex-direction: column; gap: 12px; }
-      .row-item { flex-direction: column; gap: 2px; margin-bottom: 16px; }
+    /* Mobile Quick-Fix */
+    @media (max-width: 650px) {
+      header, .publication {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .profile-photo, .publication img {
+        margin-bottom: 15px;
+      }
     }
   </style>
 </head>
@@ -247,56 +231,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/gif/elephant.gif" alt="GS2Mesh elephant thumbnail">
         <div class="pub-details">
           <h3>GS2Mesh: Surface Reconstruction from Gaussian Splatting via Novel Stereo Views</h3>
-          <p><strong>Yaniv Wolf</strong>*, <a href="https://scholar.google.com/citations?hl=en&user=vocN0JsAAAAJ" target="_blank">Amit Bracha</a>*, <a href="https://ron.cs.technion.ac.il/" target="_blank">Ron Kimmel</a></p>
-          <p class="conference">ECCV 2024</p>
+          <p><strong>Yaniv Wolf</strong><sup>*</sup>, <a href="https://scholar.google.com/citations?hl=en&user=vocN0JsAAAAJ" target="_blank">Amit Bracha</a><sup>*</sup>, <a href="https://ron.cs.technion.ac.il/" target="_blank">Ron Kimmel</a></p>
+          <p class="conference"><strong>ECCV 2024</strong></p>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2404.01810" target="_blank">Paper</a>
-            <a href="https://gs2mesh.github.io/" target="_blank">Project Page</a>
-            <a href="https://github.com/yanivw12/gs2mesh" target="_blank">Code</a>
+            <a href="https://arxiv.org/abs/2404.01810" target="_blank">paper</a>
+            <a href="https://gs2mesh.github.io/" target="_blank">project page</a>
+            <a href="https://github.com/yanivw12/gs2mesh" target="_blank">code</a>
           </div>
-          <p class="tldr"><b>TL;DR:</b> We present a fast and accurate method to reconstruct smooth, geometrically-consistent surfaces from any Gaussian Splatting (GS) model, by utilizing the superior novel view synthesis capabilities of GS and the strong 3D data-driven prior of stereo correspondence models.</p>
+          <p><b>TL;DR:</b> We present a fast and accurate method to reconstruct smooth, geometrically-consistent surfaces from any Gaussian Splatting (GS) model, by utilizing the superior novel view synthesis capabilities of GS and the strong 3D data-driven prior of stereo correspondence models.</p>
         </div>
       </div>
     </section>
 
     <section id="education">
       <h2>Education</h2>
-      <div class="row-item">
-        <div class="date">2023 &ndash; 2025</div>
-        <div class="content">MSc in Computer Science &mdash; Technion - Israel Institute of Technology</div>
-      </div>
-      <div class="row-item">
-        <div class="date">2019 &ndash; 2023</div>
-        <div class="content">BSc in Computer Science &mdash; Technion - Israel Institute of Technology</div>
-      </div>
+      <table>
+        <tr>
+          <td class="date">2023-2025</td>
+          <td class="announcement">MSc in Computer Science - Technion - Israel Institute of Technology</td>
+        </tr>
+        <tr>
+          <td class="date">2019-2023</td>
+          <td class="announcement">BSc in Computer Science - Technion - Israel Institute of Technology</td>
+        </tr>
+      </table>
     </section> 
 
     <section id="experience">
       <h2>Experience</h2>
-      <div class="row-item">
-        <div class="date">2025 &ndash; Present</div>
-        <div class="content">AI and Computer Vision Research and Development at Lumana</div>
-      </div>
+      <table>
+        <tr>
+          <td class="date">2025-Present</td>
+          <td class="announcement">AI and Computer Vision Research and Development at Lumana</td>
+        </tr>
+      </table>
     </section> 
 
     <section id="talks">
       <h2>Talks</h2>
-      <div class="row-item">
-        <div class="date">May 12, 2025</div>
-        <div class="content">
-          <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25202" target="_blank">Dagstuhl Seminar on Generative Models for 3D Vision</a> - "3D Foundation Models for Enhanced Geometry from Gaussian Splatting"
-        </div>
-      </div>
-      <div class="row-item">
-        <div class="date">Dec 16, 2024</div>
-        <div class="content">
-          <a href="https://sites.google.com/view/israelcomputervisionday2024/home" target="_blank">Israel Computer Vision Day 2024</a> - "GS2Mesh: Surface Reconstruction from Gaussian Splatting via Novel Stereo Views" (<a href="https://www.youtube.com/live/8mTGJ0oaKdQ?si=febEBSFJYMrGnaR5" target="_blank">video</a>, start at 3:12:08)
-        </div>
-      </div>
-      <div class="row-item">
-        <div class="date">Nov 17, 2024</div>
-        <div class="content">Workshop on Nano Satellites, Volcani Institute - "Gaussian Splatting for Multi‐View Geometry Reconstruction"</div>
-      </div>
+      <table>
+        <tr>
+          <td class="date">May 12, 2025</td>
+          <td class="announcement">
+            <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25202" target="_blank">Dagstuhl Seminar on Generative Models for 3D Vision</a> - "3D Foundation Models for Enhanced Geometry from Gaussian Splatting"
+          </td>
+        </tr>
+        <tr>
+          <td class="date">Dec 16, 2024</td>
+          <td class="announcement">
+            <a href="https://sites.google.com/view/israelcomputervisionday2024/home" target="_blank">Israel Computer Vision Day 2024</a> - "GS2Mesh: Surface Reconstruction from Gaussian Splatting via Novel Stereo Views" (<a href="https://www.youtube.com/live/8mTGJ0oaKdQ?si=febEBSFJYMrGnaR5" target="_blank">video</a>, start at 3:12:08)
+          </td>
+        </tr>
+        <tr>
+          <td class="date">Nov 17, 2024</td>
+          <td class="announcement">Workshop on Nano Satellites, Volcani Institute - "Gaussian Splatting for Multi‐View Geometry Reconstruction"</td>
+        </tr>
+      </table>
     </section>
     
     <section id="contact">
